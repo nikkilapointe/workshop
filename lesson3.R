@@ -99,7 +99,10 @@ seq(10)
 # make a function that prints the first N numbers of a sequence
 # it takes a single number as input and returns all natural numbers up to that number
 print_N <- function(N){
-  print(seq(N))
+  Ns <- seq(N)
+  for(i in Ns){
+    print(i)
+  }
 }
 # test it out
 print_N(3)
