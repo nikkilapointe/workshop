@@ -137,10 +137,24 @@ mean(dat[2.])
 # get an error, even though the same thing works for columns
 # this is because if you take the row of a data frame, it's a data frame
 class(dat[2,])
-class(dat[,2])
 # if you take a column of a data frame, it converts it into a string of integers
+class(dat[,2])
 # this is because R knows that all the data in a column is the same data type
 # by virtue of it being a data frame, it's not sure the same is true in a row
 # apply has this consideration baked in
+max_patient_inflammation <- apply(dat, 1, max)
+plot(max_patient_inflammation)
 # but if we want to do it by hand, we have to say as.integer
 mean(as.integer(dat[2,]))
+
+# we saved this script into the "workshop" folder (not "data" sub folder)
+# then did git add, git commit through Git Bash interface
+# then i set things up to be able to push to a github repository
+# on github I made a new repository called workshop
+# in Bash, did "git remote add origin" then https link copied from github
+# did "git remote -v" to make sure everything was working
+# push to github with "git push origin master"
+
+
+# 
+
